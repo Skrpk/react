@@ -29,7 +29,6 @@ export default class Layout extends React.Component {
             return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>;
         }
         let keyVar = 0;
-        debugger
         const mappedTweets = tweets.map((tweet) => {
             return <Tweet key={keyVar++} id={tweet.id} text={tweet.text}/>;
         });

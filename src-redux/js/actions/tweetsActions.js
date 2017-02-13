@@ -30,6 +30,7 @@ export function updateTweet(id, text) {
     }
 }
 
-export function deleteTweet(id) {
-    return {type: "DELETE_TWEET", payload: id};
+export function deleteTweet() {
+    debugger
+    return {type: "DELETE_TWEET", payload: this.id};
 }

@@ -5,8 +5,8 @@ import React from "react";
 import {deleteTweet, updateTweet} from "../actions/tweetsActions";
 
 export default class Tweet extends React.Component {
-    constructor () {
-        super();
+    deleteTweet () {
+        store.dispatch(deleteTweet.call(this));
     }
     render () {
         debugger
@@ -15,7 +15,7 @@ export default class Tweet extends React.Component {
         return (
                 <li id={this.props.id}>
                     {this.props.text}
-                    <button class="btn btn-danger" onClick={deleteTweet.bind(this, this.id)}>Delete</button>
+                    <button class="btn btn-danger" onClick={this.deleteTweet}>Delete</button>
                 </li>
         );
     }
