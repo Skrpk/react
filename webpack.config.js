@@ -6,7 +6,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-    context: path.join(__dirname, "src-flux"),
+    context: path.join(__dirname, "src-redux"),
     devtool: debug ? "inline-sourcemap" : null,
     entry: "./js/client.js",
     module: {
@@ -23,7 +23,7 @@ module.exports = {
         ]
     },
     output: {
-        path: __dirname + "/src-flux/",
+        path: __dirname + "/src-redux/",
         filename: "client.min.js"
     },
     plugins: debug ? [] : [

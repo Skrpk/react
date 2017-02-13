@@ -23,7 +23,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "webpack-dev-server --content-base src-flux --inline --hot"
+    "dev": "webpack-dev-server --content-base src-redux --inline --hot"
   },
   "author": "",
   "license": "ISC",
