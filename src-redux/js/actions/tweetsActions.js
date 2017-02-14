@@ -8,7 +8,7 @@ export function fetchTweets() {
             })
             .catch((err) => {
                 dispatch({type: "FETCH_TWEETS_REJECTED", payload: err})
-            })
+            });
     }
 }
 
@@ -31,6 +31,5 @@ export function updateTweet(id, text) {
 }
 
 export function deleteTweet() {
-    debugger
     return {type: "DELETE_TWEET", payload: this.id};
 }

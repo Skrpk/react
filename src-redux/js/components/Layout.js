@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import { fetchUser } from "../actions/userActions";
 import { fetchTweets } from "../actions/tweetsActions";
-
+import { ulStyle } from "../styles";
 import Tweet from "./Tweet.js";
 
 @connect((store) => {
@@ -25,6 +25,8 @@ export default class Layout extends React.Component {
 
     render () {
         const { user, tweets } = this.props;
+        debugger
+        this.ulStyle = ulStyle;
         if (!tweets.length) {
             return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>;
         }
@@ -34,7 +36,7 @@ export default class Layout extends React.Component {
         });
         return <div>
                 <h1>{user.name}</h1>
-                <ul>{mappedTweets}</ul>
+                <ul style={this.ulStyle}>{mappedTweets}</ul>
             </div>;
     }
 }

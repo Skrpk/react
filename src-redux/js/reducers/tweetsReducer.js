@@ -38,7 +38,6 @@ export default function reducer(state={
             }
         }
         case "DELETE_TWEET": {
-            debugger
             return {
                 ...state,
                 tweets: state.tweets.filter(tweet => tweet.id !== action.payload)
